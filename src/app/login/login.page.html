@@ -1,0 +1,49 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar  style="height: 300px;">
+    
+      <img style="top: -80px; position: relative; " src="assets/hotdog.png">
+       
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col id="ion">
+        <p id="terceiro">Bem vindo ao admin fabrica de hotdog!</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col id="ion">
+        <input type="text" [(ngModel)]="data.usuario" style="border-radius: 5px ;background-position: 10px; border: solid 2px #dfdfdf;; height: 50px; width: 95%; padding-left: 40px; background-image:url(assets/Mail.png); background-repeat:no-repeat;font-size:15px;font-family: Ubuntu" placeholder="Seu endereço de email">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col id="ion">
+        <input type="password" [(ngModel)]="data.senha" style="border-radius: 5px ;background-position: 10px; border: solid 2px #dfdfdf;; height: 50px; width: 95%;padding-left: 40px; background-image:url(assets/User.png); background-repeat:no-repeat;font-size:15px;font-family: Ubuntu" placeholder="Sua senha">
+      </ion-col>
+    </ion-row>
+
+    
+
+
+    <ion-row>
+      <ion-col size="12" id="ionn">  
+        <button (click)="logar()" id="botao2"><p id="bot">Prosseguir</p></button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" id="ionn">  
+        <button (click)="sair()" id="botao2"><p id="bot">Voltar</p></button>
+      </ion-col>
+    </ion-row>
+
+    <div *ngIf="resposta == true">Usuário não encontrado</div>
+
+    
+    
+    </ion-grid>
+</ion-content>

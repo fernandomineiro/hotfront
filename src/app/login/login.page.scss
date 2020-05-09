@@ -1,0 +1,152 @@
+#primeiro{
+    font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+color: #0C3F8D;
+margin-bottom: -30px;
+}
+#segundo{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: #0C3F8D;
+    padding-top: 10px;
+    font-weight: 500;
+}
+#terceiro{
+    font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 14px;
+letter-spacing: 0.15px;
+color: #cdcc11;;
+position: relative;
+left: 5%;
+}
+
+#quarto{
+    font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;
+color: #FF6500;
+
+letter-spacing: 0.15px;
+}
+
+#pular{
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height, or 143% */
+    
+    text-align: center;
+    
+    /* Primario */
+    
+    background-color: white;
+}
+#botao1{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30%;
+    
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-weight: 500;
+    color:white;
+    
+    background-color: white;
+    border-radius: 4px;
+    width: 90%;
+    text-align: center;
+}
+
+#botao2{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30%;
+    
+    position: relative;
+    left: 5%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    font-weight: 500;
+    color:white;
+    
+    background-color: #cdcc11;;
+    border-radius: 4px;
+    
+    text-align: center;
+    width: 90%;
+}
+
+#ion{
+    left:10px;
+    right:10px;
+}
+
+#bot{
+    font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+text-align: center;
+font-weight: 700;
+
+/* White */
+
+color: #FFFFFF;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+align-self: center;
+margin: 0px 0px 0px 10px;
+}
+
+#bo{
+    
+    font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+text-align: center;
+
+/* White */
+
+color: #0C3F8D;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+align-self: center;
+margin: -10px 0px 0px 10px;
+
+}
+

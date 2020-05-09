@@ -1,0 +1,44 @@
+<ion-content>
+  <ion-app *ngIf="ab != false" style="z-index: 1;"  >
+  
+    <ion-menu   contentId="content1" side="start" type="push" >
+      <ion-header >
+        <ion-toolbar >
+          <ion-title >Menu</ion-title>
+        </ion-toolbar>
+      </ion-header> 
+      <ion-content color="#643838" style="z-index: 0;"  >
+        <img style="position: relative; left: 10%; width: 60px; height: 60px;" src="assets/hotdog.png"><br>
+        <p style="color: #052166; font-size: 16px; font-weight: bold; position: relative; left: 4%">Seu HOT DOG está saindo por</p>
+        <p style="color: black; font-size: 16px;  position: relative; left: 4%">{{valor}} REAIS, você tem {{quantidade}} itens</p><br>
+        <div style="background-color: gray; height: 1px; width: 100%; position: relative; margin-bottom: 8%;"></div>
+        <div *ngFor="let item of pessoas">
+        <p routerLink='/compraa/{{item.id}}' style="position:relative; left: 4%; color: black; font-size: 16px; margin-bottom: 8%;"><img style="width: 20px; height: 20px; position: relative; top: 4px; margin-right: 10%;"  src="assets/02.png">{{item.tipo}}</p>
+      </div>
+        <p (click)="sair()" style="position:relative; left: 4%; color: black; font-size: 16px; margin-bottom: 8%;"><img style="width: 20px; height: 20px; position: relative; top: 4px; margin-right: 10%;" src="assets/07.png">Sair</p>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content1" main></ion-router-outlet>
+  </ion-app>
+      
+  <ion-buttons slot="start">
+    <ion-menu-button (click)="a()" style="color: white; left: 10%; position: relative; font-weight: bold; top: 5%" autoHide="false">
+    </ion-menu-button>
+  </ion-buttons>
+  <div class="new-background-color"  > 
+    <ion-toolbar color="#cdcc11;" style="background-color: #cdcc11;">
+      
+      <ion-buttons slot="start">
+        <ion-menu-button (click)="a()" style="color: white; left: 10%; position: relative; font-weight: bold; top: 5%" autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <img id="a" style="left: 85%; position: relative; top: 5px; height: 40px; width: 50px;" src="assets/iconemens.png" >
+    </ion-toolbar>
+    <img id="bola" src="assets/hotdog.png"> 
+    
+  </div> 
+<p id="ola" style="font-weight: bold;">Olá <span id="rr">Cliente</span></p>
+<p style="color: black; font-weight: 700; width: 90%; font-size: 18px; position: relative; top: -20px; left: 5%">Olá Para começar a fazer seu pedido clique no menu esquerdo para escolhes os itens...</p>
+
+   <button (click)="sair()" style="width: 300px; height: 50px; color: black; background-color: #cdcc11;; border-radius: 5px; position: relative; left: 10% ">SAIR</button>
+ 
+</ion-content>

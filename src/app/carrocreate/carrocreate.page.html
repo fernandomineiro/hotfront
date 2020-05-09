@@ -1,0 +1,70 @@
+<ion-content>
+  <ion-app *ngIf="ab != false" style="z-index: 1;"  >
+  
+    <ion-menu   contentId="content1" side="start" type="push" >
+      <ion-header >
+        <ion-toolbar >
+          <ion-title >Menu</ion-title>
+        </ion-toolbar>
+      </ion-header> 
+      <ion-content color="#643838" style="z-index: 0;"  >
+        <img style="position: relative; left: 10%; width: 60px; height: 60px;" src="assets/hotdog.png"><br>
+        <p style="color: #052166; font-size: 16px; font-weight: bold; position: relative; left: 4%">{{nome}}</p>
+        <p style="color: black; font-size: 16px;  position: relative; left: 4%">{{cpf}}</p><br>
+        <div style="background-color: gray; height: 1px; width: 100%; position: relative; margin-bottom: 8%;"></div>
+        <p routerLink='/tipo' style="position:relative; left: 4%; color: black; font-size: 16px; margin-bottom: 8%; "><img style="width: 25px; height: 20px; position: relative; top: 4px; margin-right: 10%;" src="assets/01.png">Tipo</p>
+        <p routerLink='/produto' style="position:relative; left: 4%; color: black; font-size: 16px; margin-bottom: 8%;"><img style="width: 20px; height: 20px; position: relative; top: 4px; margin-right: 10%;" src="assets/02.png">Produto</p>
+        <p routerLink='/carro' style="position:relative; left: 4%; color: black; font-size: 16px; margin-bottom: 8%;"><img style="width: 20px; height: 20px; position: relative; top: 4px; margin-right: 10%;" src="assets/03.png" routerLink='/produto'>Carroças</p>
+        <div style="background-color: gray; height: 1px; width: 100%; position: relative; margin-bottom: 8%;"></div>
+        <p style="position:relative; left: 4%; color: black; font-size: 16px; margin-bottom: 8%;"><img style="width: 20px; height: 20px; position: relative; top: 4px; margin-right: 10%;" src="assets/04.png">Admin</p>
+        
+        <div style="background-color: gray; height: 1px; width: 100%; position: relative; margin-bottom: 8%;"></div>
+        <p (click)="sair()" style="position:relative; left: 4%; color: black; font-size: 16px; margin-bottom: 8%;"><img style="width: 20px; height: 20px; position: relative; top: 4px; margin-right: 10%;" src="assets/07.png">Sair da conta</p>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content1" main></ion-router-outlet>
+  </ion-app>
+  
+  <div class="new-background-color"  > 
+    <ion-toolbar color="#cdcc11;" style="background-color: #cdcc11;">
+       
+      <ion-buttons slot="start">
+        <ion-menu-button (click)="a()" style="color: white; left: 10%; position: relative; font-weight: bold; top: 5%" autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <img id="a" style="left: 85%; position: relative; top: 5px; height: 40px; width: 50px;" src="assets/iconemens.png" >
+    </ion-toolbar>
+    <div id="bola"><p id="pala">{{primeiro}}</p> <img id="cam" src="assets/cam.png"></div>
+    
+  </div>
+<p id="ola" style="font-weight: bold;">Olá <span id="rr">{{nome}},</span></p>
+<p style="color: gray; font-size: 12px; position: relative; top: -20px; left: 30%">Que tipo de vocẽ gostaria de criar?</p>
+
+<ion-row>
+  <span>Nome</span>
+  <input type="text" [(ngModel)]="data.nome" style="border-radius: 5px ;background-position: 10px; border: solid 2px #dfdfdf;; height: 50px; width: 95%; padding-left: 40px; background-image:url(assets/Mail.png); background-repeat:no-repeat;font-size:15px;font-family: Ubuntu" placeholder="Digite nome">
+</ion-row>
+<ion-row>
+  <span>Endereço</span>
+  <input type="text" [(ngModel)]="data.endereco" style="border-radius: 5px ;background-position: 10px; border: solid 2px #dfdfdf;; height: 50px; width: 95%; padding-left: 40px; background-image:url(assets/Mail.png); background-repeat:no-repeat;font-size:15px;font-family: Ubuntu" placeholder="Digite endereço">
+</ion-row>
+<ion-row>
+  <span>Número</span>
+  <input type="text" [(ngModel)]="data.numero" style="border-radius: 5px ;background-position: 10px; border: solid 2px #dfdfdf;; height: 50px; width: 95%; padding-left: 40px; background-image:url(assets/Mail.png); background-repeat:no-repeat;font-size:15px;font-family: Ubuntu" placeholder="Digite numero">
+</ion-row>
+<ion-row>
+  <span>Cidade</span>
+  <input type="text" [(ngModel)]="data.cidade" style="border-radius: 5px ;background-position: 10px; border: solid 2px #dfdfdf;; height: 50px; width: 95%; padding-left: 40px; background-image:url(assets/Mail.png); background-repeat:no-repeat;font-size:15px;font-family: Ubuntu" placeholder="Digite cidade">
+</ion-row>
+<ion-row>
+  <span>Informação</span>
+  <input type="text" [(ngModel)]="data.informacao" style="border-radius: 5px ;background-position: 10px; border: solid 2px #dfdfdf;; height: 50px; width: 95%; padding-left: 40px; background-image:url(assets/Mail.png); background-repeat:no-repeat;font-size:15px;font-family: Ubuntu" placeholder="Digite seu informação">
+</ion-row>
+
+
+  <ion-button (click)="submitForm()">
+    Add novo tipo
+  </ion-button>
+
+
+
+</ion-content>
